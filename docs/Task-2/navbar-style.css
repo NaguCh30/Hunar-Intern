@@ -1,0 +1,151 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+
+header {
+  width: 100%;
+  height: 80px;
+  background: rgba(224, 240, 234, 1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #1c0631;
+  position: fixed;
+  z-index: 1000;
+  top:0;
+  left: 0;
+  border-radius: 0 0 7px 7px;
+}
+.logo {
+  font-size: 2em;
+  color: #1c0631;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #1c0631;
+}
+
+.nav-bar ul {
+  display: flex;
+}
+.nav-bar ul li a {
+  display: block;
+  color: #3C2A4D;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 25px;
+  border: 1px solid white;
+  border-radius: 15px;
+  transition: all 0.2s ease;
+  margin: 0 1rem;
+  background-color: rgba(255, 2555, 255, 0.5);
+  box-shadow: 1px 1px 2px #1c0631;;
+}
+.nav-bar ul li a:hover {
+  border-radius: 80px;
+  opacity: 0.7;
+  border: 1px solid #3C2A4D;
+}
+
+.nav-bar ul li a:active {
+  opacity: 0.3;
+}
+
+.hamburger {
+  display: none;
+  position: relative; 
+}
+
+.nav-bar ul li a.current-page {
+  opacity: 0.7;
+  border: 1px solid #a81717;
+  border-radius: 80px;
+  box-shadow: 1px 1px 2px #1c0631;;
+}
+
+
+@media only screen and (max-width: 1320px) {
+  header {
+    padding: 0 50px;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  header {
+    padding: 0 30px;
+  }
+}
+@media only screen and (max-width: 940px) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    padding-bottom: 26px;
+  }
+  .hamburger i {
+    font-size: 28px;
+    color: #fefefe;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+    position: absolute;
+  }
+
+  .nav-bar {
+    height: 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: rgba(224, 240, 234, 1);;
+    transition: 0.5s;
+    overflow: hidden;
+  }
+
+  .nav-bar.active {
+    height: 450px;
+  }
+
+  .nav-bar ul {
+    display: block;
+    width: fit-content;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+  }
+
+  .nav-bar.active ul {
+    opacity: 1;
+  }
+
+  .nav-bar ul li a {
+    margin-bottom: 12px;
+  }
+}
+
+#menu-icon {
+  opacity: 1;
+  color: #1c0631;
+  transform: scale(1);
+}
+#close-icon {
+  opacity: 0;
+  transform: scale(0);
+}
+.hamburger.active #menu-icon {
+  opacity: 0;
+  transform: scale(0);
+}
+.hamburger.active #close-icon {
+  opacity: 1;
+  color: #1c0631;
+  transform: scale(1);
+}

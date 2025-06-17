@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Hive | About Us</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="navbar-style.css">
+  <link rel="stylesheet" href="styles/about-style.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  
+  
+  
+</head>
+<body>
+  <div id="navbar-container"></div>
+
+  <h2>About Study Hive</h2>
+
+<button class="collapsible"><i class="fa-solid fa-book-open"></i> 
+  Introduction <span class="arrow"><i class="fa-solid fa-chevron-down"></i></span>
+</button>
+<div class="content">
+  <p>Welcome to <strong>Study Hive</strong> – your free and friendly platform to learn, grow, and upskill!</p>
+  <p>Study Hive is designed for all learners who want to explore programming and skill-based content through easy-to-understand, text-based lessons. Whether you're just starting your learning journey or looking to sharpen your existing knowledge, we’ve got something for everyone.</p>
+  <p>Our goal is to make learning accessible, free, and flexible — with no hidden costs, no pressure, and no barriers.</p>
+  <p>We’re just getting started! Exciting new features like progress tracking, certificates, and interactive tools are on the way to make your learning experience even better.</p>
+</div>
+
+<button class="collapsible"><i class="fa-solid fa-bullseye"></i> Our Mission <span class="arrow"><i class="fa-solid fa-chevron-down"></i></span>
+</button>
+<div class="content">
+  <p>At <strong>Study Hive</strong>, our mission is to make quality learning available to everyone — for free.</p>
+  <p>We believe education should be simple, accessible, and useful in real life. Our focus is on practical, skill-based content that helps learners become confident and job-ready.</p>
+</div>
+
+<button class="collapsible"><i class="fa-solid fa-hand-holding-hand"></i> What We Offer <span class="arrow"><i class="fa-solid fa-chevron-down"></i></span>
+</button>
+<div class="content">
+  <ul>
+    <li>Text-based lessons on programming and essential skills</li>
+    <li>A beginner-friendly learning environment</li>
+    <li>Clean and simple user experience</li>
+    <li>100% free access — no payments, no ads</li>
+    <li>Upcoming features like certifications, learning progress, and more</li>
+  </ul>
+</div>
+<button class="collapsible"><i class="fa-solid fa-person-circle-question"></i> Who It's For <span class="arrow"><i class="fa-solid fa-chevron-down"></i></span>
+</button>
+<div class="content">
+  <p><strong>Study Hive</strong> is made for:</p>
+  <ul>
+    <li>Students beginning their programming journey</li>
+    <li>Job seekers looking to upskill</li>
+    <li>Curious learners exploring new topics</li>
+    <li>Anyone who wants to learn at their own pace</li>
+  </ul>
+</div>
+
+<button class="collapsible"><i class="fa-solid fa-clipboard-question"></i>
+  How It Works <span class="arrow"><i class="fa-solid fa-chevron-down"></i></span>
+</button>
+<div class="content">
+  <ol>
+    <li>Visit the website</li>
+    <li>Browse available courses</li>
+    <li>Start reading and learning instantly</li>
+    <li>Track your progress (Coming soon)</li>
+    <li>arn recognition or certificates (Coming soon)</li>
+  </ol>
+</div>
+
+<button class="collapsible"><i class="fa-solid fa-users-line"></i>
+  Join the Community <span class="arrow"><i class="fa-solid fa-chevron-down"></i></span>
+</button>
+<div class="content">
+  <p>Join thousands of learners on their journey to improvement.</p>
+  <p><strong>Study Hive</strong> is more than just a website — it’s a growing hub for passionate self-learners.</p>
+  <p>Share it with your friends, help others grow, and be part of something valuable.</p>
+  <p>Start today. Stay curious. Keep learning.</p>
+</div>
+
+<button class="collapsible"><i class="fa-solid fa-id-badge"></i>
+  Contact <span class="arrow"><i class="fa-solid fa-chevron-down"></i></span>
+</button>
+<div class="content">
+  <p>You can contact us by clicking the following link... <a href="contact.html" target="_blank">ContactUs</a></p>
+</div>
+
+<button class="collapsible"><i class="fa-solid fa-comment-dots"></i>
+  Feedback <span class="arrow"><i class="fa-solid fa-chevron-down"></i></span>
+</button>
+<div class="content">
+  <p>
+    Got feedback, suggestions, or questions? We'd love to hear from you.
+  </p>
+
+  <p><a href="mailto:readlater73@gmail.com">Send Mail</a></p>
+
+  <p>Your feedback helps us improve and serve you better.</p>
+  
+</div>
+
+<script>
+  const collapsibles = document.querySelectorAll('.collapsible');
+  collapsibles.forEach(button => {
+    const content = button.nextElementSibling;
+    const arrow = button.querySelector('.arrow');
+    button.addEventListener('click', () => {
+      const isActive = button.classList.toggle('active');
+      if (isActive) {
+        content.classList.add('open');
+        content.style.maxHeight = content.scrollHeight + "px";
+        if (arrow) arrow.style.transform = 'rotate(180deg)';
+      } else {
+        content.style.maxHeight = 0;
+        content.classList.remove('open');
+        if (arrow) arrow.style.transform = 'rotate(0deg)';
+      }
+    });
+  });
+  //  recalculate maxHeight on page load in case some are open by default
+  window.addEventListener('load', () => {
+    document.querySelectorAll('.content.open').forEach(content => {
+      content.style.maxHeight = content.scrollHeight + "px";
+    });
+  });
+</script>
+
+<script src="navbar-script.js" defer></script>
+</body>
+</html>

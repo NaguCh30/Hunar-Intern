@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Hive | Register</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="navbar-style.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="styles/register-style.css">
+</head>
+<body>
+  <div id="navbar-container"></div>
+    <div class="form-container">
+      <p>You are enrolling for  
+        <span class="course-title" style="font-weight: bold; font-style: italic;">
+        COURSE-TITLE
+        </span> <i class="fa-solid fa-book-open-reader"></i>
+      </p>
+
+    <form id="registration-form" data-toast="Registered successfully! Visit the dashboard to continue.">
+
+      <div class="form-group">
+        <input type="text" id="name" name="name" placeholder=" " required>
+        <label for="name">Name</label>
+      </div>
+
+      <div class="form-group">
+        <input type="tel" id="mobile" name="mobile" placeholder=" " required>
+        <label for="mobile"><i class="fa-solid fa-mobile-screen-button"></i> Mobile</label>
+      </div>
+
+      <div class="form-group">
+        <input type="email" id="email" name="email" placeholder=" " required>
+        <label for="email"><i class="fa-solid fa-envelope"></i> Email</label>
+      </div>
+      <div class="buttons">
+        <button type="submit">Enroll <i class="fa-brands fa-get-pocket"></i></button>
+      </div>
+    </form>
+  </div>
+  <div id="toast" class="toast"></div>
+
+  <script src="navbar-script.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>

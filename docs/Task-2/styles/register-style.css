@@ -1,0 +1,133 @@
+html {
+  overflow-y: scroll;
+}
+.toast {
+  visibility: hidden;
+  min-width: min(70%, 400px);;
+  background-color: rgba(255, 255, 255, 0.35);
+  color: #3C2A4D;
+  text-align: center;
+  border-radius: 8px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30px;
+  font-size: 17px;
+  font-weight: 700;
+  transition: visibility 0s, opacity 0.5s linear;
+  opacity: 0;
+}
+
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #E0F0EA, #95ADBE);
+  font-family: 'Poppins', sans-serif;
+  color: #3C2A4D;
+  min-height: 100vh;
+}
+.form-container{
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(20px);;
+  padding: 1rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+  width: 350px;
+}
+.form-container p{
+  color: #503A65;
+  font-size: 1.3em;
+  padding-left: 10px;
+}
+.form-group{
+  position: relative;
+  margin: 25px;
+}
+
+.form-group input{
+  width: 100%;
+  padding: 12px 10px 12px 10px;
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  outline: none;
+  font-size: 16px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  color: #3C2A4D;
+}
+.form-group label{
+  position:absolute;
+  top: 12px;
+  left: 10px;
+  background: transparent;
+  padding: 0 5px;
+  color: rgb(104, 101, 101);
+  font-weight: 500;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.2s ease all;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label {
+  top: -19px;
+  left: 8px;
+  font-size: 18px;
+  color: #3C2A4D;
+}
+
+.form-group input:focus{
+  border-color: #3C2A4D;
+  outline: none;
+  box-shadow: 0 0 5px #3C2A4D;
+}
+
+.buttons{
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-right: 25px;
+}
+
+button{
+  background: #503A65;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background: #574F7D;
+  transform: translateY(-2px);
+}
+
+button:active {
+  background: #3C2A4D;
+  transform: scale(0.98);
+  opacity: 0.3;
+
+}
+
+
+@media (max-width: 400px) {
+  .form-container {
+    width: 90%;
+    padding: 30px 20px;
+  }
+}

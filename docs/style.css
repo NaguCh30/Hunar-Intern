@@ -1,0 +1,93 @@
+body {
+  margin: 3% 2%;
+  font-family: 'Nunito', sans-serif;
+
+}
+.main-title {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+}
+.heading {
+  font-size: 3rem;
+  margin-bottom: 8px;
+  margin-top: 18px;
+  text-shadow: 1px 1px 0 #000, 2px 2px 5px rgba(0,0,0,0.5), 3px 3px 7px #c68282;
+}
+
+.sub-heading {
+  margin-top: 0;
+  margin-left: max(2rem, 10vw);
+  font-size: 1.1rem;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.task-card {
+  display: flex;
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px rgba(59, 54, 54, 0.6);
+  width: min(700px, 80%);
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  justify-content: space-around;
+  transition: all 0.3s ease;
+}
+
+.task-card p {
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+  text-shadow: 1px 1px 0 #000;
+}
+.task-card a{
+  box-sizing: border-box;
+  padding: 8px 25%;
+  text-decoration: none;
+  font-size: 20px;
+  background: rgba(216, 208, 208, 0.3);
+  border-radius: 15px;
+  color: rgb(56, 55, 57);
+  transition: all 0.3s ease;
+  transition: active 0.1s;
+  text-shadow: 1px 1px 0 rgb(56, 55, 57);
+}
+
+.task-card a:hover {
+  border-radius: 30px;
+  box-shadow: 10px 7px 10px rgba(59, 54, 54, 0.3);
+}
+
+.task-card a:active {
+  color: rgb(227, 140, 140);
+}
+
+
+.task-card:hover {
+  box-shadow: 5px 5px 10px rgba(59, 54, 54, 0.4);
+}
+
+ @media (max-width: 600px) {
+  body {
+    margin-left: 7%;
+  }
+  .main-title {
+    margin-left: 0;
+  }
+  .heading {
+    font-size: 2rem;
+  }
+  .task-card {
+    margin-left: 0;
+  }
+  .task-card p {
+    font-size: 18px;
+  }
+  .task-card a {
+    padding: 8px 5vw;
+    font-size: 18px;
+  }
+ }

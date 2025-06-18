@@ -67,3 +67,9 @@ h2 {
   color: #3C2A4D;
   margin-bottom: 1rem;
 }
+
+@media screen and (max-width: 768px) {
+  body {
+    padding-left: 2px;
+  }
+}
